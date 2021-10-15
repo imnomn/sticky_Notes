@@ -2,146 +2,87 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- boostrap cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/a18d44c31d.js" crossorigin="anonymous"></script>
+   <!-- boostrap cdn -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <!-- font awesome -->
+   <script src="https://kit.fontawesome.com/a18d44c31d.js" crossorigin="anonymous"></script>
 
-    <title>Sticky Notes</title>
-    <style>
-        body {
-            background: rgba(81, 124, 81, 0.521);
-            font-family: cursive;
-            text-align: center;
-        }
-        
-        nav a {
-            font-size: 2rem !important;
-            color: white !important;
-            font-weight: 900;
-        }
-        
-        nav i {
-            font-size: 40px;
-            color: #c2ff3d;
-        }
-        
-        .notes {
-            width: 300px;
-            height: 300px;
-            overflow: hidden;
-            display: inline-block;
-            box-shadow: 7px 7px 20px rgb(116, 116, 116);
-        }
-    </style>
+   <title>Sticky Notes</title>
+   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
+   <div class="container-fluid">
+      <div class="row">
 
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#"><i class="fas fa-sticky-note"></i>Sticky Notes</a>
+         <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+            <div class="container-fluid">
+               <a class="navbar-brand" href="#"><i class="fas fa-sticky-note"></i>Sticky Notes</a>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <form class="d-flex ms-auto">
-                            <!-- Button trigger modal -->
-                            <button class="btn btn-outline-light" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Note</button>
-
-
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">New Note</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button><br>
-
-                                        </div>
-
-                                        <div class="modal-body">
-                                            <div class="mb-3">
-
-                                                <input type="text" class="form-control" id="note_title" placeholder="Note Title">
-                                            </div>
-                                            <div class="mb-3">
-
-                                                <textarea class="form-control" rows="9" id="message-text" placeholder="Note"></textarea>
-                                            </div>
-
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary" onclick="myFunc()" data-bs-dismiss="modal">Save Note</button>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </form>
-                    </div>
-                </div>
-            </nav>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <form class="d-flex ms-auto">
+                     <!-- Button trigger modal -->
+                     <button class="btn btn-outline-light" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Note</button>
 
 
-            <!-- <div id="notes">
+                     <!-- Modal -->
+                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                           <div class="modal-content">
+                              <div class="modal-header">
+                                 <h5 class="modal-title" id="exampleModalLabel">New Note</h5>
+                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button><br>
+
+                              </div>
+
+                              <div class="modal-body">
+                                 <div class="mb-3">
+
+                                    <input type="text" class="form-control" id="note_title" placeholder="Note Title">
+                                 </div>
+                                 <div class="mb-3">
+
+                                    <textarea class="form-control" rows="9" id="message-text" placeholder="Note"></textarea>
+                                 </div>
+
+                              </div>
+                              <div class="modal-footer">
+                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                 <button type="button" class="btn btn-primary" onclick="myFunc()" data-bs-dismiss="modal">Save Note</button>
+                              </div>
+
+                           </div>
+                        </div>
+                     </div>
+
+                  </form>
+               </div>
+            </div>
+         </nav>
+
+
+         <!-- <div id="notes">
 
             </div> -->
 
 
 
-        </div>
+      </div>
 
-    </div>
-
-
-
-
-    <!-- bs cdn -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script>
-        function myFunc() {
-            var random_colors = ["#c2ff3d", "#ff3de8", "#3dc2ff", "#04e022", "#bc83e6", "#ebb328"];
-            var random_margin = ["5px", "10px", "-2px", "3px", "-5px", "7px"];
-            var random_degree = ["rotate(5deg)", "rotate(-5deg)", "rotate(0deg)", "rotate(2deg)", "rotate(3deg)", "rotate(-2deg)"]
-            var title = document.getElementById("note_title").value;
-            var message = document.getElementById("message-text").value;
-
-
-
-            var random_no = Math.floor(Math.random() * 6);
-
-
-            div = document.createElement("div");
-            div.className = "notes";
-            div.innerHTML = "<h4  style = 'display : inline;'>" + title + "</h4> <button type='button' onmousedown = 'myFunc2(this);' style = 'position: absolute; right: 0px; margin: 10px;' class='btn-close' ></button><hr> <p>" + message + "</p>";
-            div.style.margin = random_margin[random_no];
-            div.style.backgroundColor = random_colors[random_no];
-            div.style.transform = random_degree[random_no]
-            document.body.appendChild(div);
+   </div>
 
 
 
 
-        }
-
-        function myFunc2(a) {
-
-            a.parentElement.remove();
-
-
-
-
-        }
-    </script>
+   <!-- bs cdn -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   <script src="index.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,24 @@
+body {
+    background: rgba(81, 124, 81, 0.521);
+    font-family: cursive;
+    text-align: center;
+}
+
+nav a {
+    font-size: 2rem !important;
+    color: white !important;
+    font-weight: 900;
+}
+
+nav i {
+    font-size: 40px;
+    color: #c2ff3d;
+}
+
+.notes {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    display: inline-block;
+    box-shadow: 7px 7px 20px rgb(116, 116, 116);
+}
